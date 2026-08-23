@@ -30,3 +30,9 @@ def SigmoidDerivative(X: np.ndarray) -> np.ndarray:
     """Derivative of the Sigmoid function."""
     s = Sigmoid(X)
     return s * (1.0 - s)
+
+def Softmax(logits: np.ndarray) -> np.ndarray:
+    # Subtracting the maximum value for numerical stability (prevents overflow)
+    shifted_logits = logits - np.max(logits, axis=1, keepdims=True)
+    exps = np.exp(shifted_logits)
+    return exps / np.sum(exps, axis=1, keepdims=True)
