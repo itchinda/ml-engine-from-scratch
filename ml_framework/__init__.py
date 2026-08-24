@@ -2,8 +2,8 @@
 
 # Importe les classes depuis tes sous-modules pour les rendre directement accessibles
 from .layers import LinearLayer, ActivationLayer, Conv2D, MaxPool2D, Flatten, Dropout
-from .activations import ReLU, ReLUDerivative, Sigmoid, SigmoidDerivative
-from .losses import BinaryCrossEntropyLoss, CrossEntropyLoss
+from .activations import ReLU, ReLUDerivative, Sigmoid, SigmoidDerivative, Tanh, TanhDerivative, Softmax
+from .losses import BinaryCrossEntropyLoss, CrossEntropyLoss, MSELoss
 from .optimizers import Adam, SGD
 from .models import Sequential
 
@@ -18,8 +18,12 @@ __all__ = [
     "ReLUDerivative",
     "Sigmoid",
     "SigmoidDerivative",
+    "Tanh",
+    "TanhDerivative",
+    "Softmax",
     "BinaryCrossEntropyLoss",
     "CrossEntropyLoss",
+    "MSELoss",
     "Adam",
     "SGD",
     "Sequential"
